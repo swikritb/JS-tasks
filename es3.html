@@ -1,0 +1,40 @@
+<html>
+  <head></head>
+  <body>
+    <h3>
+      companies that have category Retail, increment their start by 1 and
+      appending in the DOM
+    </h3>
+
+    <h3>RESULT</h3>
+    <p id="result"></p>
+  </body>
+  <script>
+    const companies = [
+      { name: "Company One", category: "Finance", start: 1981, end: 2004 },
+      { name: "Company Two", category: "Retail", start: 1992, end: 2008 },
+      { name: "Company Three", category: "Auto", start: 1999, end: 2007 },
+      { name: "Company Four", category: "Retail", start: 1989, end: 2010 },
+      { name: "Company Five", category: "Technology", start: 2009, end: 2014 },
+      { name: "Company Six", category: "Finance", start: 1987, end: 2010 },
+      { name: "Company Seven", category: "Auto", start: 1986, end: 1996 },
+      { name: "Company Eight", category: "Technology", start: 2011, end: 2016 },
+      { name: "Company Nine", category: "Retail", start: 1981, end: 1989 },
+    ];
+    let name = "<div>";
+    let i = 1;
+    companies.forEach((element) => {
+      if (element.category == "Retail") {
+        name += i + "<br>{<br>";
+        name += "Name:" + element.name + ",<br>";
+        name += "Category:" + element.category + ",<br>";
+        name += "Start:" + element.start + ",<br>";
+        name += "End:" + element.end + ",<br>";
+
+        name += "}</div><br>";
+        i++;
+      }
+    });
+    document.getElementById("result").innerHTML = name;
+  </script>
+</html>
